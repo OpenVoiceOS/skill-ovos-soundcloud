@@ -12,27 +12,21 @@ search soundcloud by voice!
 * "play piratech in soundcloud"
 * "play piratech nuclear chill"
 
-# Platform support
+## Settings
 
-- :heavy_check_mark: - tested and confirmed working
-- :x: - incompatible/non-functional
-- :question: - untested
-- :construction: - partial support
+you can add queries to skill settings that will then be pre-fetched on skill load
 
-|     platform    |   status   |  tag  | version | last tested | 
-|:---------------:|:----------:|:-----:|:-------:|:-----------:|
-|    [Chatterbox](https://hellochatterbox.com)   | :question: |  dev  |         |    never    | 
-|     [HolmesV](https://github.com/HelloChatterbox/HolmesV)     | :question: |  dev  |         |    never    | 
-|    [LocalHive](https://github.com/JarbasHiveMind/LocalHive)    | :question: |  dev  |         |    never    |  
-|  [Mycroft Mark1](https://github.com/MycroftAI/enclosure-mark1)    | :question: |  dev  |         |    never    | 
-|  [Mycroft Mark2](https://github.com/MycroftAI/hardware-mycroft-mark-II)    | :question: |  dev  |         |    never    |  
-|    [NeonGecko](https://neon.ai)      | :question: |  dev  |         |    never    |   
-|       [OVOS](https://github.com/OpenVoiceOS)        | :question: |  dev  |         |    never    |    
-|     [Picroft](https://github.com/MycroftAI/enclosure-picroft)       | :question: |  dev  |         |    never    |  
-| [Plasma Bigscreen](https://plasma-bigscreen.org/)  | :question: |  dev  |         |    never    |  
+this populates the featured_media entries + provides fast matching against cached entries
 
-- `tag` - link to github release / branch / commit
-- `version` - link to release/commit of platform repo where this was tested
+```javascript
+{    
+"featured_tracks" : ["piratech nuclear chill"],
+"featured_artists":  ["rob zombie", "metallica", "piratech"],
+"featured_sets": ["jazz", "classic rock"]
+}
+```
+
+a local cache of entries can be found at `~/.cache/OCP/Soundcloud.json`
 
 ## Credits
 JarbasAl
